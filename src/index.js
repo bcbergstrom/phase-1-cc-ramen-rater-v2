@@ -42,11 +42,12 @@ const displayRamens = () => {
   fetch("http://localhost:3000/ramens")
   .then(r => r.json())
   .then(ramens => {
+    handleClick(ramens[0])
     ramens.forEach(ramen => {
       console.log(ramen)
       addRamen(ramen)
     })
-  })
+  }) 
 
 };
 
